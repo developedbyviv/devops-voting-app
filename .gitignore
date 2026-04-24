@@ -1,0 +1,14 @@
+# Environment variables - NEVER commit these
+.env
+.env.*
+
+# Dependencies
+node_modules/
+__pycache__/
+
+# OS files
+.DS_Store
+
+# Build artifacts
+dist/
+build/
