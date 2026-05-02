@@ -1,11 +1,11 @@
-version: '3.8'
+
 services:
   # -------------- Database ------------------------------------------
   postgres:
     image: postgres:15-alpine
     container_name: voting-db
     environment:
-      POSTGRES_DB: voting-db
+      POSTGRES_DB: votingapp
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
@@ -21,7 +21,7 @@ services:
     networks:
       - voting-network
     
-  # -------------- Database ------------------------------------------
+  # -------------- Backend ------------------------------------------
   backend:
     build:
       context: ./backend
